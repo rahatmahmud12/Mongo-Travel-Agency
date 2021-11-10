@@ -4,14 +4,16 @@ const Manage = (props) => {
     const { service } = props
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://calm-beach-10483.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
 
         })
+
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+
             })
     }
     return (
